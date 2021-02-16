@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CoMotionH3.Views.AboutPage"
+             xmlns:vm="clr-namespace:CoMotionH3.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#fcbd0d</Color>
+            <Color x:Key="Accent">#fcbd0d</Color>
+            <Color x:Key="LightTextColor">#000000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,10,0,10" VerticalOptions="FillAndExpand">
+                    <Image Source="CoMotionLogo.jpg" VerticalOptions="Center" HeightRequest="150" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Who/What is Comotion?" FontAttributes="Bold" FontSize="22" />
+                                <Span Text=" " />
+                                <!--<Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />-->
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="We are the CoMotion Hash House Harriers - CoMotion H3. In short history, 'Hashing' was founded back in 1938 by British Soldiers stationed in what is now Malaysia. Those who wanted to run off the 'excess' fun of the weekend would meet on Mondays and run trails together alike to the 'Hare &amp; Hounds' game, ending at a 'Hash House' for refreshment and servings of food. More on the History can be found:" />
+                                <Span Text="https://en.wikipedia.org/wiki/Hash_House_Harriers"
+                                      TextColor="Blue"
+                                      TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                             CommandParameter="https://en.wikipedia.org/wiki/Hash_House_Harriers" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="We are a non-competitive running social club, sometimes referred to as a 'drinking club with a running problem'. Each week, a member of our group volunteers to lay the Trail the rest of us will follow. This causes the start locationa dn path we take to vary each week, seeing new sights and going places we may never go otherwise; sometimes pounding pavement downtown, and other times blazing our own trails out in nature where no one else has been. We aim to 'leave no trace' and thus our Trails are marked using Chalk, Flour, or Toilet Paper that degrades with the rain. The Trails are typically anywhere from 2-5mi in length, completely up to the 'Hare' marking Trail for the night." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Likened to the 'Hounds &amp; Hares' game, we theoretically as the Hounds are giving chase and trying to catch the Hare, who gets only a 15min start from the rest of us. Should we catch them, the punsihment is quite severe and invovles beer. However, the Hares can be tricky, leaving certain marks that are false trails requiring us to backtrack to find True Trail, marks that have us stop for a short time and let everyone catch up, sing a bawdy song, or Gispert forbid, stop and enjoy a cold beverage of some manner that has been left to slow us down." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Again, we are a NON-competitive social group at heart - people of all levels of fitness (walkers, joggers, and marathoners alike) are welcome. We do not care where you are from, what you do, who you do, or what you believe - just be respectful and join in the fun! as we say, 'If you get in shape, it's your own damn fault!" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Read all that and are still interested? GOOD!" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="TRAILS - Trails are 95/5% split between the Columbia, MO area and down around Jefferson City, as some of our members live there and drive up each week to join. We have Trails EVERY Thursday, meeting at 6:00PM and On-Out at 6:30PMish. As of 2020, we also meet for every Full Moon, and try to schedule a Hash the 1st Saturday of every month (time will vary on Saturday Hashes based on other events happening). There also tends to be a few Sunday Fundays thrown in at rnadom times as well." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="We do have a Facebook Group, but we do not accept new Member Requests until you have ran at least 1 Trail with us. To get the details for the next Trail, reach out to us:" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Text="Email" 
+                        HorizontalOptions="CenterAndExpand" 
+                        Clicked="btnEmailComotion_Clicked" 
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="Black"/>
+                <!--<Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="It shares code with its" />
+                                <Span Text=" " />
+                                <Span Text="iOS, Android, and Windows" FontAttributes="Bold" />
+                                <Span Text=" " />
+                                <Span Text="versions." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Learn more"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />-->
+            </StackLayout>
+        </ScrollView>
+        
+        <!--<ScrollView Grid.Row="2">
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="AppName" FontAttributes="Bold" FontSize="22" />
+                                <Span Text=" " />
+                                <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="This app is written in C# and native APIs using the" />
+                                <Span Text=" " />
+                                <Span Text="Xamarin Platform" FontAttributes="Bold" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="It shares code with its" />
+                                <Span Text=" " />
+                                <Span Text="iOS, Android, and Windows" FontAttributes="Bold" />
+                                <Span Text=" " />
+                                <Span Text="versions." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Learn more"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>-->
+    </Grid>
+    
+</ContentPage>
